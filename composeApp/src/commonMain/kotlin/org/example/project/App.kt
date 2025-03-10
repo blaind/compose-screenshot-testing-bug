@@ -35,3 +35,8 @@ fun App() {
         }
     }
 }
+
+@Composable
+fun TestComposable() {
+    Text("Hello world!")
+}

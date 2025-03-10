@@ -7,6 +7,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
+    alias(libs.plugins.screenshot)
 }
 
 kotlin {
@@ -68,10 +69,12 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+    experimentalProperties["android.experimental.enableScreenshotTest"] = true
 }
 
 dependencies {
     debugImplementation(compose.uiTooling)
+    screenshotTestImplementation(libs.androidx.compose.ui.tooling)
 }
 
 compose.desktop {
