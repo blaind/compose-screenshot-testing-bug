@@ -15,6 +15,8 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 
 import kotlinproject.composeapp.generated.resources.Res
 import kotlinproject.composeapp.generated.resources.compose_multiplatform
+import kotlinproject.composeapp.generated.resources.test_string
+import org.jetbrains.compose.resources.stringResource
 
 @Composable
 @Preview
@@ -38,5 +40,5 @@ fun App() {
 
 @Composable
 fun TestComposable() {
-    Text("Hello world!")
+    Text(stringResource(Res.string.test_string))
 }
